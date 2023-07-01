@@ -10,10 +10,32 @@
 body {
   background-color: #17202e;
   min-height: 100vh;
-
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.pup-up {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.637);
+  z-index: 10;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.pup-up p {
+  padding: .5rem;
+  background-color: #fff;
+  color: #131313;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: .25rem;
+}
+.pup-up p span {
+  color: #c62828;
 }
 
 .container {
@@ -35,22 +57,18 @@ body {
   text-decoration: underline;
 }
 
-.input-box {
-  position: relative;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  border-radius: .25rem;
-  margin-bottom: 1rem;
-}
-.input-box input[type="text"] {
+
+.input-box input[type="url"] {
   width: 100%;
   font-size: 1rem;
-  padding: 1rem 0.5rem;
+  padding: 1rem 1rem;
+  margin-bottom: .5rem;
   background-color: transparent;
   caret-color: var(--green-color, #20c946);
+  background-color: #fff;
   color: #17202e;
   border: none;
+  border-radius: .25rem;
   outline: none;
   font-weight: bold;
   letter-spacing: .1rem;
@@ -59,32 +77,12 @@ body {
 .input-box input[type="text"]::placeholder {
   font-weight: normal;
 }
-.input-box .copy-icon {
-  width: 25px;
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-.input-box .copy-icon:active {
-  opacity: 0.2;
-}
-.input-box .copy-message {
-  display: none;
-  position: absolute;
-  padding: .5rem;
-  color: var(--green-color, #20c946);
-  font-weight: bold;
-  background-color: white;
-  border-radius: .25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -3rem;
-  z-index: 10;
-}
+
 .input-box .copy-icon:active + .copy-message {
   display: block;
 }
 
-.password-btn {
+.submit-btn {
   cursor: pointer;
   width: fit-content;
   padding: .75rem;
@@ -98,10 +96,17 @@ body {
   display: flex;
   align-items: center;
   gap: .25rem;
+  margin-bottom: 2rem;
 }
-.password-btn:active {
+.submit-btn:active {
   background-color: #149c31;
 }
-.password-btn .power-icon {
-  width: 25px;
+
+.qr-image {
+  margin-inline: auto;
+  padding: .5rem;
+  background-color: white;
+  border-radius: .25rem;
+  width: 200px;
 }
+

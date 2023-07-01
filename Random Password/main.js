@@ -12,6 +12,7 @@ let allSymbols = [...uppercase, ...symbols, ...numbers, ...lowercase];
 allSymbols = sortSymbols(allSymbols);
 passwordBtn.addEventListener("click", updatePassword);
 copyButton.addEventListener("click", function(e) {
+  passwordInput.select();
   navigator.clipboard.writeText(passwordInput.value);
 })
 function sortSymbols(symbols) {

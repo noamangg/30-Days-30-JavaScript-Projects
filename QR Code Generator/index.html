@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator | Noaman Grewatiy</title>
+  <link rel="stylesheet" href="style.css">
+
+<body>
+  <div class="pup-up">
+    <p>Your URL Is <span>Not Valid</span></p>
+  </div>
+  <div class="container">
+    <h1 class="title">Generate a <br> <span>QR Code For Your Links</span></h1>
+    <form class="input-box">
+      <input id="url-input" class="url-input" type="url" placeholder="Enter Your URL" autofocus>
+      <input class="submit-btn" type="submit" value="Generate QR Code">
+    </form>
+    <img class="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?data=https://www.linkedin.com/in/noamangrewatiy/&amp;size=200x200" alt="QR code">
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
