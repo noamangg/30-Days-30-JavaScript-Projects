@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", sans-serif;
+
+  --green-color: #20c946;
+}
+
+body {
+  background-color: #17202e;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-block: 2rem;
+  margin-inline: auto;
+  max-width: 1000px;
+  width: 500px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+.title {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+.title span {
+  color: var(--green-color, #20c946);
+  text-decoration: underline;
+}
+
+.input-box {
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: .25rem;
+  margin-bottom: 1rem;
+}
+.input-box input[type="text"] {
+  width: 100%;
+  font-size: 1rem;
+  padding: 1rem 0.5rem;
+  background-color: transparent;
+  caret-color: var(--green-color, #20c946);
+  color: #17202e;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: .1rem;
+}
+.input-box input[type="text"]::placeholder {
+  font-weight: normal;
+}
+.input-box .copy-icon {
+  width: 25px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.input-box .copy-icon:active {
+  opacity: 0.2;
+}
+.input-box .copy-message {
+  display: none;
+  position: absolute;
+  padding: .5rem;
+  color: var(--green-color, #20c946);
+  font-weight: bold;
+  background-color: white;
+  border-radius: .25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -3rem;
+  z-index: 10;
+}
+.input-box .copy-icon:active + .copy-message {
+  display: block;
+}
+
+.password-btn {
+  cursor: pointer;
+  width: fit-content;
+  padding: .75rem;
+  background-color: var(--green-color, #20c946);
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: .25rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+.password-btn:active {
+  background-color: #149c31;
+}
+.password-btn .power-icon {
+  width: 25px;
+}
