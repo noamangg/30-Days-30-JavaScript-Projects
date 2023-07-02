@@ -18,9 +18,10 @@ let QRurl = `https://api.qrserver.com/v1/create-qr-code/?data=${url}&size=200x20
 updateImg(QRurl);
 }
 else {
-  urlInput.value = " ";
   pupWindow.style.display = "flex";
 }
+
+urlInput.value = " ";
   // validate The URL
 
   // Generate the qr code
