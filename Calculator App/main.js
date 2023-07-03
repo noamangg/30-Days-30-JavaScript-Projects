@@ -1,14 +1,28 @@
 
 let calculatorApp = document.createElement("div");
-let container = document.querySelector(".container")
-let numbers = document.createElement("div");
-numbers.classList.add("numbers");
-let number = document.createElement("input");
-number.type = "button";
-console.log(number);
-for(let i = 9; i >=1 ; i--) {
-  number.value = i;
-  number.textContent = `${i}`;
-  numbers.appendChild(number.cloneNode(true));
+let buttonContainer = document.querySelector(".button-container")
+let inputFiled = document.querySelector("#input-filed");
+console.log(inputFiled.textContent);
+let operators = ['/', '*', '-', '+', '=']
+let numbers = ["C", "+/-", "%", 7, 8, 9, 4, 5, 6, 1, 2, 3, 0, '.']
+buttonContainer.appendChild(createNumbers(numbers, ["numbers-box", "box"]));
+buttonContainer.appendChild(createNumbers(operators, ["operators-box", "box"]));
+
+function createNumbers(arr, className) {
+  let numbers = document.createElement("div");
+  numbers.classList.add(...className);
+  for (let i = 0; i < arr.length; i++) {
+    let number = document.createElement("input");
+    number.type = "button";
+    number.value = arr[i];
+    number.textContent = arr[i];
+    number.addEventListener("click", function () {
+      if (number.value === "C")
+        inputFiled.value = "";
+      else if (number.value !== "+/-" && number.value !== '=')
+        inputFiled.value += arr[i];
+    })
+    numbers.appendChild(number);
+  }
+  return numbers
 }
-container.appendChild(numbers);
