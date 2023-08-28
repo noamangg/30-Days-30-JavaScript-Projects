@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="../src/all.min.css">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container py-4 px-10 rounded-lg text-white">
+    <span class="stopwatch-box w-full flex justify-center items-center text-4xl font-bold mb-6">
+      <span class="hours">00</span>:<span class="minutes">00</span>:<span class="seconds">00</span>
+    </span>
+    <div class="buttons-box flex justify-center items-center gap-2">
+      <i class="btn-stop fa-solid fa-stop btn"></i>
+      <i class="fa-solid fa-play btn-play"></i>
+      <i class="btn-reset fa-solid fa-rotate-right btn"></i>
+    </div>
+  </div>
+  <script src="../main.js"></script>
+</body>
+</html>
