@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link rel="stylesheet" href="../src/input.css">
+  <link rel="stylesheet" href="output.css">
+</head>
+<body class="h-screen flex items-center justify-center">
+
+  <div class="container max-w-lg bg-pink-200 p-4 rounded">
+    <div class="arrow-div flex justify-between mb-4">
+      <i class="icon fa-solid fa-chevron-left"></i>
+      <i class="icon fa-solid fa-bars"></i>
+    </div>
+    <img src="../download.jfif" alt="artist photo" class="block m-auto rounded-full mb-4">
+    <div class="description-box text-center mb-4">
+      <h2 class="text-gray-900 text-2xl font-bold mb-3">Pray Morning</h2>
+      <p class="text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, quo?</p>
+    </div>
+    <input type="range" id="progress" class="w-full mb-8 appearance-none bg-pink-500 rounded-lg cursor-pointer h-2">
+    <audio controls class="hidden" id="music-player">
+      <source  src="../pray-sound.mp3" type="audio/mpeg">
+    </audio>
+    <div class="control-box flex justify-center items-center gap-4">
+      <i class="icon fa-solid fa-angles-left"></i>
+      <i class="play-icon  fa-solid fa-play" onclick="playPause()"></i>
+      <i class="icon fa-solid fa-angles-right"></i>
+    </div>
+  </div>
+  <script src="../main.js"></script>
+</body>
+</html>
